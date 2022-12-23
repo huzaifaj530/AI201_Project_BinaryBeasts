@@ -19,10 +19,27 @@ RED = (255,0,0)
 YELLOW = (255,255,0)
 WHITE = (255,255,255)
 
+#define fighter variables
+HERO_SIZE=200
+HERO_SCALE=4
+HERO_OFFSET=[90,75]
+HERO_DATA=[HERO_SIZE,HERO_SCALE,HERO_OFFSET]
+WIZARD_SIZE=200
+WIZARD_SCALE=2.8
+WIZARD_OFFSET=[75,75]
+WIZARD_DATA=[WIZARD_SIZE,WIZARD_SCALE,WIZARD_OFFSET]
+
 
 #background image
 bg_image=pygame.image.load("assets/images/background/background.gif").convert_alpha()#load to memory
 
+#load spritesheets
+hero_sheet=pygame.image.load("assets/images/Hero/Sprites/Hero.png").convert_alpha()
+wizard_sheet=pygame.image.load("assets/images/Wizard/Sprites/Wizard.png").convert_alpha()
+
+#define number of steps in each animation
+HERO_ANIMATION_STEPS=[8,8,2,6,6,4,6]
+WIZARD_ANIMATION_STEPS=[6,8,2,8,8,4,7]
 
 #function for drawing image
 def draw_bg():
@@ -37,8 +54,9 @@ def draw_health_bar(health,x,y):
     pygame.draw.rect(screen,YELLOW,(x,y,400*ratio,30))
 
 #create two instances of fighters
-fighter_1 = Fighter(200,450)
-fighter_2 = Fighter(700,450)
+fighter_1 = Fighter(200,450,False,HERO_DATA,hero_sheet,WIZARD_ANIMATION_STEPS)
+fighter_2 = Fighter(700,450,True,WIZARD_DATA,wizard_sheet,WIZARD_ANIMATION_STEPS)
+
 
 #game loop
 run = True

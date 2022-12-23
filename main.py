@@ -24,7 +24,7 @@ HERO_SIZE=200
 HERO_SCALE=4
 HERO_OFFSET=[90,75]
 HERO_DATA=[HERO_SIZE,HERO_SCALE,HERO_OFFSET]
-WIZARD_SIZE=200
+WIZARD_SIZE=190
 WIZARD_SCALE=2.8
 WIZARD_OFFSET=[75,75]
 WIZARD_DATA=[WIZARD_SIZE,WIZARD_SCALE,WIZARD_OFFSET]
@@ -72,6 +72,10 @@ while run:
 
     #move fighters
     fighter_1.move(SCREEN_WIDTH,SCREEN_HEIGHT,screen,fighter_2)
+
+    #update fighters
+    fighter_1.update()
+    fighter_2.update()
 
     #draw fighters
     fighter_1.draw(screen)

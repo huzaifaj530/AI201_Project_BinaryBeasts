@@ -5,6 +5,7 @@ Used open source art
 edited all of the sprite sheets with GIMP
 
 Player 1 Controls :
+
 Movement :W,A,D
 Attack :R,T
 

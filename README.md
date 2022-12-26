@@ -1,4 +1,4 @@
-# AI201_Project_BinaryBeats
+# AI201_Project_BinaryBeasts
 street fighter like 2-d fighter-game with python(pygame)
 
 Used open source art 
